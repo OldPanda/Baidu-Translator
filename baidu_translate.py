@@ -46,7 +46,10 @@ def main():
 
     word = " ".join(args).lower()
     data = json.loads(get_response(word))
-    means = data['data']['symbols'][0]['parts'][0]['means']
+    if len(data['data']) == 0: 
+        # if word doesn't exist
+        print "Not a valid word. "
+        sys.exit(2)
     print_res(data)
 
 if __name__ == "__main__":
