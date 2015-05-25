@@ -1,13 +1,19 @@
 Baidu Translator in Command Line
 ===
 
-A simple baidu translator can be used in terminal. 
+A simple English-Chinese translator can be used in terminal. 
 
-Install
+Installation
 ---
+Download this package and  
 ```
 python setup.py install
+```   
+or run   
 ```
+(sudo) pip install baidu
+```   
+in terminal. 
 
 Usage
 ---
