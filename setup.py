@@ -6,8 +6,8 @@ version = "0.1"
 
 setup(name="baidu", 
       version=version, 
-      description="百度翻译查单词", 
-      long_description="百度翻译查单词", 
+      description="A English-Chinese translator running in terminal", 
+      long_description="A English-Chinese translator running in terminal", 
       classifiers=[], 
       keywords="python baidu translate", 
       author="OldPanda", 
