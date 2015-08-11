@@ -3,7 +3,7 @@
 
 import sys
 import getopt
-import urllib2
+import urllib
 import json
 
 # to print non-ascii string
@@ -15,7 +15,7 @@ URL = "http://openapi.baidu.com/public/2.0/translate/dict/simple"
 
 def get_response(word):
     url = URL + "?client_id=" + API_KEY + "&q=" + word + "&from=en&to=zh"
-    return urllib2.urlopen(url).read()
+    return urllib.urlopen(url).read()
 
 def print_res(data):
     print '==================================='
