@@ -1,19 +1,20 @@
 # encoding:utf-8
 from setuptools import setup, find_packages
-import sys, os
+import sys
+import os
 
 version = "0.1"
 
-setup(name="baidu", 
-      version=version, 
-      description="A English-Chinese translator running in terminal", 
-      long_description="A English-Chinese translator running in terminal", 
-      classifiers=[], 
-      keywords="python baidu translate", 
-      author="OldPanda", 
-      author_email="zjh0930@gmail.com", 
-      url="", 
-      license="", 
+setup(name="baidu",
+      version=version,
+      description="A English-Chinese translator running in terminal",
+      long_description="A English-Chinese translator running in terminal",
+      classifiers=[],
+      keywords="python baidu translate",
+      author="OldPanda",
+      author_email="zjh0930@gmail.com",
+      url="",
+      license="",
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
@@ -21,5 +22,5 @@ setup(name="baidu",
         'console_scripts': [
             'baidu=baidu.baidu:main'
         ]
-      }, 
+      },
       )

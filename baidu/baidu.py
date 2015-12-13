@@ -3,7 +3,7 @@
 
 import sys
 import getopt
-import urllib
+import requests
 import json
 
 # to print non-ascii string
@@ -13,11 +13,23 @@ sys.setdefaultencoding('utf-8')
 API_KEY = "h8VzXEBGrbBB06YFtVsdSKGG"
 URL = "http://openapi.baidu.com/public/2.0/translate/dict/simple"
 
+
 def get_response(word):
+    """ Fetch translate result from baidu api
+    Args:
+        word(str): query word
+    Returns:
+        (requests.models.Response): response object
+    """
     url = URL + "?client_id=" + API_KEY + "&q=" + word + "&from=en&to=zh"
-    return urllib.urlopen(url).read()
+    return requests.get(url)
+
 
 def print_res(data):
+    """ Print translate result in a better format
+    Args:
+        data(str): result
+    """
     print '==================================='
     main_part = data['data']
     print main_part['word_name']
@@ -32,6 +44,7 @@ def print_res(data):
             print "    ", mean
     print '==================================='
 
+
 def main():
     print "Translating..."
     try:
@@ -45,8 +58,8 @@ def main():
         sys.exit(2)
 
     word = " ".join(args).lower()
-    data = json.loads(get_response(word))
-    if len(data['data']) == 0: 
+    data = json.loads(get_response(word).text)
+    if len(data['data']) == 0:
         # if word doesn't exist
         print "Not a valid word. "
         sys.exit(2)
