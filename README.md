@@ -1,5 +1,6 @@
 Baidu Translator in Command Line
 ===
+[![PyPI version](https://badge.fury.io/py/baidu.svg)](https://badge.fury.io/py/baidu)
 [![Build Status](https://travis-ci.org/OldPanda/Baidu-Translator.svg?branch=master)](https://travis-ci.org/OldPanda/Baidu-Translator)
 
 A simple English-Chinese translator can be used in terminal. 
