@@ -2,9 +2,10 @@ language: python
 python:
   - "2.6"
   - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5.0b3"
-  - "3.5-dev"
-  - "nightly"
+install: "pip install -r requirements.txt"
+script: 
+  - "pep8 ."
+  - "py.test baidu/baidu_tests.py"
+branches:
+  only:
+    - master
