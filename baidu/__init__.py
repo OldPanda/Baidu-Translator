@@ -1,1 +1,1 @@
-import baidu
+from . import baidu
